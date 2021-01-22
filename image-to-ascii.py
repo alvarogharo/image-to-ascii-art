@@ -48,7 +48,7 @@ def generate_image_from_lines_array(lines, colors, out_path, font_col=None, mono
     font_color = (255, 0, 0)
     if font_col is not None:
         font_color = (int(font_col[2]), int(font_col[1]), int(font_col[0]))
-    line_type = 1
+    line_type = 2
 
     for i in range(len(lines)):
         for j in range(len(lines[i])):
