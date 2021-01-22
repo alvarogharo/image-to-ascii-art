@@ -1,6 +1,10 @@
 # Image to ASCII art converter
 Python script for converting any picture into an ASCII art picture.
 
+![alt text](https://github.com/alvarogharo/image-to-ascii-art/blob/main/examples/face.jpg)
+
+![alt text](https://github.com/alvarogharo/image-to-ascii-art/blob/main/examples/face-ascii.jpg)
+
 ## Installation
 ```pip3 install -r requirements.txt```
 
