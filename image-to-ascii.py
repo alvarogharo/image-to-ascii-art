@@ -70,7 +70,7 @@ if __name__ == '__main__':
     ap.add_argument("-s", "--scale", required=False, type=float, help="The scale in which the image is going to ve "
                                                                       "resized (from 0.01 to 1)")
     ap.add_argument('-c', '--color', nargs='+', help='Color for the ascii character in rgb', required=False)
-    ap.add_argument('-m', '--monochrome', type=bool, help='True if you want the picture to only be created with monochrome'
+    ap.add_argument('-m', '--monocrome', help='True if you want the picture to only be created with monocrome'
                                                          ' characters', required=False)
     args = vars(ap.parse_args())
 
@@ -80,12 +80,12 @@ if __name__ == '__main__':
     if args["scale"] is not None:
         scale = args["scale"]
     color = args["color"]
-    monochrome = False
-    if args["monochrome"] is not None:
-        monochrome = args["monochrome"]
+    monocrome = False
+    if args["monocrome"] is not None:
+        monocrome = args["monocrome"] == "True"
 
 
     image_lines, image_color = generate_lines_ascii_array_from_image(input_path, scale)
-    generate_image_from_lines_array(image_lines, image_color, output_path, color, monochrome)
+    generate_image_from_lines_array(image_lines, image_color, output_path, color, monocrome)
 
 
